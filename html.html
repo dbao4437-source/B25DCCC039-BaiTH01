@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="vi" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Đinh Nguyễn Trọng Bảo | Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="nav-wrap">
+        <a href="#home" class="brand">
+          <span class="avatar" aria-hidden="true">B</span>
+          <span class="brand-name">Đinh Nguyễn<br />Trọng Bảo</span>
+        </a>
+        <nav id="nav" class="nav" aria-label="Menu chính">
+          <a href="#home">Giới thiệu</a>
+          <a href="#skills">Kỹ năng</a>
+          <a href="#projects">Dự án</a>
+          <a href="#contact">Liên hệ</a>
+        </nav>
+        <div class="actions">
+          <button
+            id="themeToggle"
+            class="icon-btn"
+            aria-label="Chuyển giao diện sáng/tối"
+          >
+            🌙
+          </button>
+          <button
+            id="hamburger"
+            class="icon-btn hamburger"
+            aria-label="Mở menu"
+            aria-expanded="false"
+            aria-controls="nav"
+          >
+            ☰
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main class="main">
+      <section id="home" class="hero section">
+        <h1>Đinh Nguyễn<br />Trọng Bảo</h1>
+        <p class="lead">
+          Sinh viên Công nghệ thông tin, đang học lập trình Front-end. Mình
+          thích làm những trang web gọn gàng, dễ dùng trên mọi thiết bị.
+        </p>
+        <div class="hero-actions">
+          <a href="#projects" class="btn">Xem dự án</a>
+          <a href="#contact" class="btn btn-outline">Liên hệ mình</a>
+        </div>
+        <dl class="facts">
+          <div>
+            <dt>Ngành học</dt>
+            <dd>Công nghệ thông tin</dd>
+          </div>
+          <div>
+            <dt>Đang học</dt>
+            <dd>HTML, CSS, JavaScript</dd>
+          </div>
+          <div>
+            <dt>Công cụ</dt>
+            <dd>VS Code, Git, GitHub</dd>
+          </div>
+        </dl>
+      </section>
+
+      <section id="skills" class="section">
+        <h2>Kỹ năng</h2>
+        <ul class="skills">
+          <li><span>HTML5</span><i style="--lv: 85%"></i></li>
+          <li><span>CSS3</span><i style="--lv: 80%"></i></li>
+          <li><span>JavaScript</span><i style="--lv: 65%"></i></li>
+          <li><span>Git &amp; GitHub</span><i style="--lv: 60%"></i></li>
+          <li><span>Responsive Design</span><i style="--lv: 75%"></i></li>
+          <li><span>Figma cơ bản</span><i style="--lv: 45%"></i></li>
+        </ul>
+      </section>
+
+      <section id="projects" class="section">
+        <h2>Dự án</h2>
+        <div class="projects">
+          <article class="project">
+            <h3>Todo List</h3>
+            <p>Ứng dụng quản lý công việc, lưu dữ liệu bằng localStorage.</p>
+            <span class="tags">HTML · CSS · JS</span>
+          </article>
+          <article class="project">
+            <h3>Landing page quán cà phê</h3>
+            <p>
+              Trang giới thiệu quán với bố cục Grid, hiển thị tốt trên điện
+              thoại.
+            </p>
+            <span class="tags">HTML · CSS</span>
+          </article>
+          <article class="project">
+            <h3>Ứng dụng thời tiết</h3>
+            <p>Tra cứu thời tiết theo thành phố bằng API công khai.</p>
+            <span class="tags">JavaScript · API</span>
+          </article>
+        </div>
+      </section>
+
+      <section id="contact" class="section">
+        <h2>Liên hệ</h2>
+        <form id="contactForm" class="form" novalidate>
+          <div class="field">
+            <label for="name">Họ và tên</label>
+            <input type="text" id="name" name="name" autocomplete="name" />
+            <small class="error" id="nameError"></small>
+          </div>
+          <div class="field">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" autocomplete="email" />
+            <small class="error" id="emailError"></small>
+          </div>
+          <div class="field">
+            <label for="message">Lời nhắn</label>
+            <textarea id="message" name="message" rows="5"></textarea>
+            <small class="error" id="messageError"></small>
+          </div>
+          <button type="submit" class="btn">Gửi lời nhắn</button>
+          <p id="formStatus" class="status" role="status"></p>
+        </form>
+      </section>
+
+      <footer class="footer">
+        <p>
+          © <span id="year"></span> Đinh Nguyễn Trọng Bảo. Bài thực hành 01.
+        </p>
+      </footer>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
